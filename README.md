@@ -1,4 +1,9 @@
-# SpotiApp
+# Descripcion
+Angular 2 client app that consumes some services of Spotify API (token needed). Uses routing, components, bootstrap4 layout.
+
+- git clone https://github.com/MarioAraya/angular2-spotify.git
+- npm install
+- ng serve
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
