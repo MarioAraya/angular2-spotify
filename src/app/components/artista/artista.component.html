@@ -1,4 +1,4 @@
-<div *ngIf="artista" class="main-container animated fadeIn fast">
+<div *ngIf="artista" class="container main-container animated fadeIn fast">
   <div class="row">
     <div class="col-md-3 text-center">
       <img [src]="artista.images | sinfoto" class="img-thumbnail img-circle" alt="">
@@ -44,10 +44,12 @@
               <td>{{ pista.name }}</td>
               <td>{{ pista.popularity }}%</td>
               <td>
-                <audio controls>
+                <!-- <audio controls>
                   <source [src]="pista.preview_url" />
                   Tu navegador es muy viejo
-                </audio>
+                </audio> -->
+                <iframe [src]=" pista.uri | domseguro: 'https://open.spotify.com/embed?uri=' " 
+                  width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
               </td>
             </tr>
           </tbody>
