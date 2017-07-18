@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { SpotifyService } from "./services/spotify.service";
+import { SpotifyService } from './services/spotify.service';
 
 import { SinfotoPipe } from './pipes/sinfoto.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
@@ -14,6 +14,9 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { APP_ROUTING } from './app.routes';
 import { ArtistaComponent } from './components/artista/artista.component';
+import { ChartComponent } from './components/chartjs/chartjs.component';
+
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,15 @@ import { ArtistaComponent } from './components/artista/artista.component';
     NavbarComponent,
     SinfotoPipe,
     ArtistaComponent,
-    DomseguroPipe
+    DomseguroPipe,
+    ChartComponent
   ],
   imports: [
     APP_ROUTING,
     FormsModule,
     HttpModule,
-    BrowserModule
+    BrowserModule,
+    ChartsModule
   ],
   providers: [
     SpotifyService
