@@ -12,11 +12,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { APP_ROUTING } from './app.routes';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { ChartComponent } from './components/chartjs/chartjs.component';
+import { MapaComponent } from './components/mapa/mapa.component';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+
+import { APP_ROUTING } from './app.routes';
+
+const googleMapsCore = AgmCoreModule.forRoot({
+  apiKey : 'AIzaSyBm1PgqIiC9tIqHBAXhGJWypX9wOGdjttc',
+});
 
 @NgModule({
   declarations: [
@@ -27,14 +34,16 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     SinfotoPipe,
     ArtistaComponent,
     DomseguroPipe,
-    ChartComponent
+    ChartComponent,
+    MapaComponent
   ],
   imports: [
     APP_ROUTING,
     FormsModule,
     HttpModule,
     BrowserModule,
-    ChartsModule
+    ChartsModule,
+    googleMapsCore
   ],
   providers: [
     SpotifyService
