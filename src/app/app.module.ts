@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { SpotifyService } from './services/spotify.service';
+import { GeolocService } from './services/geoloc.service';
 
 import { SinfotoPipe } from './pipes/sinfoto.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
@@ -46,7 +47,8 @@ const googleMapsCore = AgmCoreModule.forRoot({
     googleMapsCore
   ],
   providers: [
-    SpotifyService
+    SpotifyService,
+    GeolocService
   ],
   bootstrap: [AppComponent]
 })
