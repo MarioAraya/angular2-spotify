@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { SpotifyService } from './services/spotify.service';
 import { GeolocService } from './services/geoloc.service';
+import { FetchFfmmService } from "./services/fetch-ffmm.service";
 
 import { SinfotoPipe } from './pipes/sinfoto.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
@@ -16,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { ChartComponent } from './components/chartjs/chartjs.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { ListaFfmmComponent } from './components/lista-ffmm/lista-ffmm.component';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
@@ -36,7 +38,8 @@ const googleMapsCore = AgmCoreModule.forRoot({
     ArtistaComponent,
     DomseguroPipe,
     ChartComponent,
-    MapaComponent
+    MapaComponent,
+    ListaFfmmComponent
   ],
   imports: [
     APP_ROUTING,
@@ -48,7 +51,8 @@ const googleMapsCore = AgmCoreModule.forRoot({
   ],
   providers: [
     SpotifyService,
-    GeolocService
+    GeolocService,
+    FetchFfmmService
   ],
   bootstrap: [AppComponent]
 })

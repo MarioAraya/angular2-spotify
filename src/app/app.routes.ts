@@ -3,11 +3,13 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { ChartComponent } from './components/chartjs/chartjs.component';
+import { ListaFfmmComponent } from "app/components/lista-ffmm/lista-ffmm.component";
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'buscar', component: SearchComponent },
   { path: 'chart', component: ChartComponent },
+  { path: 'ffmm', component: ListaFfmmComponent },
   { path: 'artista/:id', component: ArtistaComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
